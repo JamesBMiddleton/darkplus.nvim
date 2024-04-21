@@ -304,6 +304,11 @@ theme.set_highlights = function()
   hl(0, "TelescopePreviewTitle", { fg = c.ui_white, bg = 'NONE' })
   hl(0, "TelescopePromptCounter", { fg = c.ui_white, bg = 'NONE' })
   hl(0, "TelescopePreviewHyphen", { fg = c.ui_white, bg = 'NONE' })
+  hl(0, "TelescopeResultsDiffAdd",  { link = "NvimTreeGitStaged" } )
+  hl(0, "TelescopeResultsDiffChange", { link = "NvimTreeGitDirty" } )
+  hl(0, "TelescopeResultsDelete", { link = "NvimTreeGitDeleted" } )
+  hl(0, "TelescopeResultsUntracked", { link = "NvimTreeGitNew" } )
+
 
   -- Lir
   hl(0, "LirFloatNormal", { fg = c.alt_fg, bg = c.alt_bg })
