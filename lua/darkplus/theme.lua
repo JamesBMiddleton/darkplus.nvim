@@ -292,7 +292,36 @@ theme.set_highlights = function()
   hl(0, "IndentBlanklineContextChar", { fg = c.indent_active, bg = 'NONE' })
   hl(0, "IndentBlanklineContextStart", { fg = 'NONE', bg = 'NONE', underline = true, })
 
-  -- Telescope
+  -- Lir
+  hl(0, "LirFloatNormal", { fg = c.alt_fg, bg = c.alt_bg })
+  hl(0, "LirDir", { link = 'Directory' })
+  hl(0, "LirSymLink", { fg = c.cyan, bg = 'NONE' })
+  hl(0, "LirEmptyDirText", { link = 'Comment' })
+
+  -- NvimTree
+  hl(0, "NvimTreeFolderIcon", { fg = c.ui_blue, bg = "NONE" })
+  hl(0, "NvimTreeIndentMarker", { fg = c.ui_blue, bg = "NONE" })
+  hl(0, "NvimTreeFolderName", { fg = c.ui_blue, bg = "NONE" })
+  hl(0, "NvimTreeOpenedFolderName", { fg = c.ui_blue, bg = 'NONE', bold = true, italic = true, })
+  hl(0, "NvimTreeEmptyFolderName", { fg = c.dark_gray, bg = 'NONE', italic = true, })
+  hl(0, "NvimTreeNormal", { fg = c.alt_fg, bg = c.alt_bg })
+  hl(0, "NvimTreeWinSeparator", { fg = c.alt_bg, bg = c.alt_bg })
+  hl(0, "NvimTreeImageFile", { fg = c.ui_purple, bg = 'NONE' })
+  hl(0, "NvimTreeSpecialFile", { fg = c.ui_orange, bg = 'NONE' })
+  hl(0, "NvimTreeEndOfBuffer", { fg = c.alt_bg, bg = 'NONE' })
+  hl(0, "NvimTreeCursorLine", { fg = 'NONE', bg = c.select })
+  hl(0, "NvimTreeGitStaged", { fg = c.gitsigns_add, bg = 'NONE' })
+  hl(0, "NvimTreeGitNew", { fg = c.git_tree_add, bg = 'NONE' })
+  hl(0, "NvimTreeGitRenamed", { fg = c.git_tree_add, bg = 'NONE' })
+  hl(0, "NvimTreeGitDeleted", { fg = c.git_tree_delete, bg = 'NONE' })
+  hl(0, "NvimTreeGitMerge", { fg = c.git_tree_change, bg = 'NONE' })
+  hl(0, "NvimTreeGitDirty", { fg = c.git_tree_change, bg = 'NONE' })
+  hl(0, "NvimTreeSymlink", { fg = c.cyan, bg = 'NONE' })
+  hl(0, "NvimTreeRootFolder", { fg = c.fg, bg = 'NONE', bold = true, })
+  hl(0, "NvimTreeExecFile", { fg = c.ui_green, bg = 'NONE' })
+  hl(0, "NvimTreeGitIgnored", { fg = c.light_gray, bg = 'NONE', italic = true, })
+
+    -- Telescope
   hl(0, "TelescopeSelection", { fg = 'NONE', bg = c.select })
   hl(0, "TelescopeSelectionCaret", { fg = c.ui_blue, bg = c.select })
   hl(0, "TelescopeMatching", { fg = c.match, bg = 'NONE', bold = true, italic = true, })
@@ -308,37 +337,7 @@ theme.set_highlights = function()
   hl(0, "TelescopeResultsDiffChange", { link = "NvimTreeGitDirty" } )
   hl(0, "TelescopeResultsDelete", { link = "NvimTreeGitDeleted" } )
   hl(0, "TelescopeResultsUntracked", { link = "NvimTreeGitNew" } )
-
-
-  -- Lir
-  hl(0, "LirFloatNormal", { fg = c.alt_fg, bg = c.alt_bg })
-  hl(0, "LirDir", { link = 'Directory' })
-  hl(0, "LirSymLink", { fg = c.cyan, bg = 'NONE' })
-  hl(0, "LirEmptyDirText", { link = 'Comment' })
-
-  -- NvimTree
-  hl(0, "NvimTreeFolderIcon", { fg = c.ui_blue, bg = "NONE" })
-  hl(0, "NvimTreeIndentMarker", { fg = c.ui_blue, bg = "NONE" })
-  hl(0, "NvimTreeFolderName", { fg = c.ui_blue, bg = "NONE" })
-  hl(0, "NvimTreeOpenedFolderName", { fg = c.ui_blue, bg = 'NONE', bold = true, italic = true, })
-  hl(0, "NvimTreeEmptyFolderName", { fg = c.dark_gray, bg = 'NONE', italic = true, })
-  hl(0, "NvimTreeNormal", { fg = c.alt_fg, bg = c.alt_bg })
-  hl(0, "NvimTreeWinSeparator", { fg = c.alt_bg, bg = c.alt_bg })
-  hl(0, "NvimTreeGitIgnored", { fg = c.light_gray, bg = 'NONE', italic = true, })
-  hl(0, "NvimTreeImageFile", { fg = c.ui_purple, bg = 'NONE' })
-  hl(0, "NvimTreeSpecialFile", { fg = c.ui_orange, bg = 'NONE' })
-  hl(0, "NvimTreeEndOfBuffer", { fg = c.alt_bg, bg = 'NONE' })
-  hl(0, "NvimTreeCursorLine", { fg = 'NONE', bg = c.select })
-  hl(0, "NvimTreeGitStaged", { fg = c.gitsigns_add, bg = 'NONE' })
-  hl(0, "NvimTreeGitNew", { fg = c.git_tree_add, bg = 'NONE' })
-  hl(0, "NvimTreeGitRenamed", { fg = c.git_tree_add, bg = 'NONE' })
-  hl(0, "NvimTreeGitDeleted", { fg = c.git_tree_delete, bg = 'NONE' })
-  hl(0, "NvimTreeGitMerge", { fg = c.git_tree_change, bg = 'NONE' })
-  hl(0, "NvimTreeGitDirty", { fg = c.git_tree_change, bg = 'NONE' })
-  hl(0, "NvimTreeSymlink", { fg = c.cyan, bg = 'NONE' })
-  hl(0, "NvimTreeRootFolder", { fg = c.fg, bg = 'NONE', bold = true, })
-  hl(0, "NvimTreeExecFile", { fg = c.ui_green, bg = 'NONE' })
-
+  
   -- Git
   hl(0, "GitSignsAdd", { fg = c.gitsigns_add, bg = 'NONE' })
   hl(0, "GitSignsChange", { fg = c.gitsigns_change, bg = 'NONE' })
